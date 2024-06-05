@@ -3,8 +3,6 @@
 // Execute `rustlings hint iterators4` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
-
 pub fn factorial(num: u64) -> u64 {
     // Complete this function to return the factorial of num
     // Do not use:
@@ -15,6 +13,11 @@ pub fn factorial(num: u64) -> u64 {
     // For an extra challenge, don't use:
     // - recursion
     // Execute `rustlings hint iterators4` for hints.
+    // let rng = 1..=num;
+    // let list_of_nr: Vec<u64> = rng.collect();
+    // list_of_nr.into_iter().rev().fold(1, |current_sum, x| current_sum * x)
+    
+    (1..=num).into_iter().fold(1, |current_sum, x| current_sum * x)
 }
 
 #[cfg(test)]
